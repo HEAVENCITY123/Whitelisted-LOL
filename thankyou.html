@@ -52,12 +52,45 @@
     <!-- Small Corner Image -->
     <img src="ewrp.png" alt="EWRP Logo" class="corner-image">
 
-    <!-- Thank You Message -->
-    <h1>🎉 Thank You for Being Awesome! 🎉</h1>
-    <p>We appreciate your time and effort! You're now ready to continue your journey. 🚀</p>
-    <p>Ithine Kurich endelum Parayan undengil, feel free to tell me. 
-   <a href="https://discord.com/users/1233643609794809902" target="_blank">_bobuttan_</a>.
+<!-- Discord Button -->
+<a href="#" onclick="openDiscordApp()" class="button">
+    <img src="discordlogo.png" alt="Discord Logo"> Continue to Discord
+</a>
+
+<!-- Thank You Message -->
+<h1>🎉 Thank You for Being Awesome! 🎉</h1>
+<p>We appreciate your time and effort! You're now ready to continue your journey. 🚀</p>
+<p>Ithine Kurich endelum Parayan undengil, feel free to tell me. 
+   <a href="#" onclick="openDiscordDM()">_bobuttan_</a>.
 </p>
+
+<script>
+function openDiscordApp() {
+    var appLink = "discord://-/channels/1050013657905508443/1335678110632247306";
+    var webLink = "https://discord.com/channels/1050013657905508443/1335678110632247306";
+
+    // Try opening the app
+    window.location.href = appLink;
+
+    // Fallback to web after delay if the app doesn't open
+    setTimeout(function() {
+        window.location.href = webLink;
+    }, 10000);
+}
+
+function openDiscordDM() {
+    var dmAppLink = "discord://-/users/1233643609794809902";
+    var dmWebLink = "https://discord.com/users/1233643609794809902";
+
+    // Try opening the app
+    window.location.href = dmAppLink;
+
+    // Fallback to web after delay if the app doesn't open
+    setTimeout(function() {
+        window.location.href = dmWebLink;
+    }, 10000);
+}
+</script>
 
 
 <!-- Discord Button -->
