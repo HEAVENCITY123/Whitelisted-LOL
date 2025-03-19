@@ -60,10 +60,23 @@
 </p>
 
 
-    <!-- Discord Button -->
-    <a href="https://discord.com/channels/1050013657905508443/1335678110632247306" class="button">
-        <img src="discordlogo.png" alt="Discord Logo"> Continue to Discord
-    </a>
+<!-- Discord Button -->
+<a href="#" onclick="openDiscordApp()" class="button">
+    <img src="discordlogo.png" alt="Discord Logo"> Continue to Discord
+</a>
 
-</body>
-</html>
+<script>
+function openDiscordApp() {
+    var appLink = "discord://-/channels/1050013657905508443/1335678110632247306";
+    var webLink = "https://discord.com/channels/1050013657905508443/1335678110632247306";
+
+    // Try opening the app
+    window.location.href = appLink;
+
+    // Fallback to web after delay if the app doesn't open
+    setTimeout(function() {
+        window.location.href = webLink;
+    }, 1000);
+}
+</script>
+
